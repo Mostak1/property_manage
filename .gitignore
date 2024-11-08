@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+
+# Django migrations
+**/migrations/
+
+# Environment variables
+.env
+
+# Static files and uploads
+/static/
+/media/
+
+# Local development settings
+settings_local.py
+
+# pytest cache and other test artifacts
+.pytest_cache/
+htmlcov/
+
+# IDE files (VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+
+# Coverage reports
+.coverage
+*.cover
+*.coverage.*
+
+# Profiling data
+*.prof
+
+# MySQL/MariaDB dumps
+*.sql
+
+# Celery beat schedule file
+celerybeat-schedule

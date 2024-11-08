@@ -1,0 +1,62 @@
+{% extends './partials/layout.html' %}
+
+{% block content %}
+
+{% include  "./partials/header.html" with pageTitle="Project Details" breadcrumbItem="Project Details" %}
+
+    {# Start Project Details Section #}
+    <section class="cs_pt_130 cs_pt_lg_80 cs_pb_93 cs_pb_lg_80">
+      <div class="container">
+        <div>
+          <div class="cs_project_details-head d-flex align-items-center justify-content-between flex-wrap cs_mb_40 cs_row_gap_15 cs_column_gap_15">
+            <h2 class="m-0 cs_fs_48 cs_fs_lg_36">Marketing Webdesign </h2>
+            <div class="cs_published_date d-inline-flex cs_rounded_5 bg-accent text-white cs_pt_5 cs_pb_5 cs_pl_15 cs_pr_15 cs_pt_lg_3 cs_pb_lg_3">23 May, 2023</div>
+          </div>
+          <img src="/static/img/project_details_img.jpeg" alt="Thumb" class="cs_mb_60 cs_mb_lg_40">
+          <div class="row">
+            <div class="col-lg-8">
+              <div  class="cs_project_details cs_pb_40">
+                <p class="m-0">There are many variations of passages of Lorem Ipsum available, but majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum. There are many variations of passages of Lorem Ipsum available, but majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum.</p> <br>
+                <h3 class="text-accent cs_fs_20 cs_lh_base m-0">There are many variations of passages of Lorem Ipsum available, but majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</h3> <br>
+                <p class="cs_mb_35">If you are going to use a passage of Lorem Ipsum. Suspendisse ultricies vestibulum vehicula. Proin laoreet porttitor lacus. Duis auctor vel ex eu elementum. <br>
+                Mauris non dignissim purus, ac commodo diam. Donec sit amet lacinia nulla. Aliquam quis purus in justo pulvinar tempor. Aliquam tellus nulla, sollicitudin at euismod nec, feugiat at nisi. Quisque vitae odio nec lacus interdum tempus. Phasellus a rhoncus erat. Vivamus vel eros vitae est aliquet pellentesque vitae et nunc. Sed vitae leo vitae nisl pellentesque semper.</p>
+                <h4 class="cs_fs_18 cs_mb_12">Project Challenges : </h4>
+                <ul class="cs_mb_30 cs_list cs_style_1">
+                  <li>Nemo enim ipsam voluptatem quia voluptas mus et iusto odio</li>
+                  <li>Vivamus vel eros vitae est aliquet pellentesque</li>
+                  <li>If you are going to use a passage of Lorem Ipsum</li>
+                </ul>
+                <p class="m-0">Mauris non dignissim purus, ac commodo diam. Donec sit amet lacinia nulla. Aliquam quis purus in justo pulvinar tempor. Aliquam tellus nulla, sollicitudin at euismod nec, feugiat at nisi. Quisque vitae odio nec lacus interdum tempus. Phasellus a rhoncus erat. Vivamus vel eros vitae est aliquet pellentesque vitae et nunc. Sed vitae leo vitae nisl pellentesque semper.</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <ul class="cs_project_details-info bg-white cs_rounded_20 m-0 cs_pl_50 cs_pt_50 cs_pr_50 cs_pb_50 cs_pl_lg_40 cs_pt_lg_40 cs_pr_lg_40 cs_pb_lg_40">
+                <li>
+                  <h3 class="cs_fs_18 cs_mb_10">Services:</h3>
+                  <p class="m-0">Digital, Marketing</p>
+                </li>
+                <li>
+                  <h3 class="cs_fs_18 cs_mb_10">Client:</h3>
+                  <p class="m-0">Kristin Watson</p>
+                </li>
+                <li>
+                  <h3 class="cs_fs_18 cs_mb_10">Location :</h3>
+                  <p class="m-0">7529 E. Pecan St.</p>
+                </li>
+                <li>
+                  <div class="cs_social_btns d-flex flex-wrap cs_column_gap_15 cs_row_gap_15 cs_transition_5">
+                    <a href="#" class="d-flex align-items-center justify-content-center cs_height_35 cs_width_35 rounded-circle"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="d-flex align-items-center justify-content-center cs_height_35 cs_width_35 rounded-circle"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="d-flex align-items-center justify-content-center cs_height_35 cs_width_35 rounded-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="d-flex align-items-center justify-content-center cs_height_35 cs_width_35 rounded-circle"><i class="fa-brands fa-dribbble"></i></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {# End Project Details Section #}
+    
+    {% endblock content %}
