@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'Bizmax.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydatabase',  # Database name
+        'NAME': 'property_db',  # Database name
         'USER': 'root',         # Default XAMPP MySQL username
         'PASSWORD': '',         # XAMPP MySQL password (blank by default)
         'HOST': 'localhost',    # Localhost
