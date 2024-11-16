@@ -35,12 +35,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # other apps...
+    'Bizmax',  # Add your app here
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # other apps...
 ]
 
 MIDDLEWARE = [
@@ -76,6 +79,8 @@ WSGI_APPLICATION = 'Bizmax.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+
+AUTH_USER_MODEL = 'Bizmax.CustomUser' 
 
 DATABASES = {
     'default': {
