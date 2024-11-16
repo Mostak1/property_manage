@@ -1,0 +1,84 @@
+/*--------------------------------------------------------------
+9. Experience
+----------------------------------------------------------------*/
+.cs_experience_box {
+  border: 15px solid #fff;
+  height: 246px;
+  h2 {
+    letter-spacing: 0.2em;
+  }
+}
+.cs_experience.cs_style_1 {
+  .cs_experience_thumb {
+    padding: 40px 175px 115px 40px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 255px;
+      height: 304px;
+      background-color: #f2f3f5;
+      border-radius: 15px;
+      left: 0;
+      top: 0;
+    }
+    @media (max-width: 1400px) {
+      padding: 40px 40px 115px 40px;
+    }
+    @media (max-width: 575px) {
+      padding: 25px 30px 115px 24px;
+    }
+  }
+  .cs_experience_shape {
+    position: absolute;
+    bottom: 0px;
+    right: 220px;
+  }
+  .cs_experience_box {
+    box-shadow: none;
+    width: 300px;
+    height: 360px;
+    margin-bottom: 75px;
+  }
+  &.cs_type_1 {
+    width: 125%;
+    margin-left: -20%;
+    @media (max-width: 1600px) {
+      width: 100%;
+      margin-left: 0;
+    }
+    .cs_experience_thumb {
+      padding: 0;
+      &::before {
+        display: none;
+      }
+    }
+    .cs_experience_box {
+      left: 0;
+      top: 10%;
+      border-width: 12px;
+      box-shadow: 0px 0px 8.7714px 4.3857px rgba(192, 186, 186, 0.25);
+      @media (max-width: 575px) {
+        position: relative !important;
+        top: 0;
+        margin-bottom: 0;
+        margin-top: 30px;
+        width: 100%;
+      }
+    }
+  }
+  &.cs_type_2 {
+    width: 120%;
+    margin-left: -25%;
+    @media (max-width: 1199px) {
+      width: 100%;
+      margin-left: 0;
+    }
+    .cs_experience_thumb {
+      padding: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

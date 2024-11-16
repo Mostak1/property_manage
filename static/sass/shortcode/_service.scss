@@ -1,0 +1,54 @@
+/*--------------------------------------------------------------
+10. Service
+----------------------------------------------------------------*/
+.cs_service.cs_style_1 {
+  border-top: 3px solid $accent;
+  .cs_service_thumb {
+    height: 242px;
+    margin-left: -10px;
+    width: calc(100% + 20px);
+  }
+  .cs_service_thumb-in {
+    border-radius: inherit;
+  }
+  .cs_service_thumb {
+    .cs_service_btn {
+      right: 17px;
+      top: -20px;
+      transform: rotate(45deg);
+    }
+  }
+  .cs_service_btn {
+    height: 40px;
+    width: 40px;
+    transition: all 0.4s ease;
+    background-color: $accent;
+  }
+  .cs_service_icon {
+    height: 70px;
+    width: 70px;
+    background-color: $primary;
+  }
+  &:hover {
+    border-color: $primary;
+    .cs_service_icon {
+      background-color: $accent;
+    }
+    .cs_service_btn {
+      background-color: $primary;
+      transform: rotate(0);
+      &:hover {
+        transform: rotate(-45deg) scale(1.08);
+      }
+    }
+  }
+  &.cs_type_1 {
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+  }
+}
+.cs_service_1-info {
+  gap: 15px 25px;
+}

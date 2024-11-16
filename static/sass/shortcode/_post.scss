@@ -1,0 +1,80 @@
+/*--------------------------------------------------------------
+  13. Posts
+----------------------------------------------------------------*/
+.cs_post.cs_style_1 {
+  .cs_post_thumb {
+    height: 346px;
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: all 0.4s ease;
+      z-index: 1;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+      .cs_post_thumb-in {
+        transform: scale(1.1);
+      }
+    }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      height: 245px;
+    }
+  }
+  .cs_post_meta {
+    list-style: none;
+    line-height: 1.4em;
+    li {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+    i {
+      color: $accent;
+      margin-right: 5px;
+    }
+  }
+  .cs_post_btn {
+    background-color: rgba(112, 112, 112, 0.1);
+    color: $primary;
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+      .cs_post_btn-icon {
+        color: #fff;
+      }
+    }
+  }
+
+  .cs_post_btn-icon {
+    color: $accent;
+  }
+  &.cs_type_1 {
+    @media (min-width: 451px) {
+      display: flex;
+      gap: 20px;
+      .cs_post_thumb {
+        width: 35%;
+        height: initial;
+      }
+      .cs_post_in {
+        width: 65%;
+      }
+    }
+    @media (max-width: 450px) {
+      .cs_post_in {
+        padding-left: 20px;
+      }
+      .cs_post_info {
+        padding-right: 0 !important;
+      }
+    }
+  }
+}
