@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ property.title }}</title>
+</head>
+<body>
+    <h1>{{ property.title }}</h1>
+    <p>{{ property.description }}</p>
+    <p>Price: ${{ property.total_price }}</p>
+    <p>Area: {{ property.area }} sq. ft</p>
+    <p>Type: {{ property.get_property_type_display }}</p>
+    <p>Address: {{ property.address }}</p>
+    <p>District: {{ property.district }}</p>
+    <p>Division: {{ property.division }}</p>
+    <p>Publish Date: {{ property.publish_date }}</p>
+
+    <h2>Photos</h2>
+    <div>
+        {% for photo in property.property_photos.all %}
+            <img src="{{ photo.photo.url }}" alt="Property Photo" style="width:200px;">
+        {% endfor %}
+    </div>
+</body>
+</html>

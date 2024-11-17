@@ -2,7 +2,8 @@
 from django.contrib import admin
 from django.urls import path
 from Bizmax import views
-
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -30,4 +31,9 @@ urlpatterns = [
     path('shop', views.shop),
     path('team-details', views.teamDetails),
     path('team', views.team),
+
+    path('properties/', views.property_list, name='property_list'),
+    path('properties/<int:pk>/', views.property_detail, name='property_detail'),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
