@@ -8,7 +8,7 @@
     <ul>
         {% for property in properties %}
             <li>
-                <h2><a href="{% url 'property_detail' property.id %}">{{ property.title }}</a></h2>
+                <h2><a class="inline-block" href="{% url 'property_detail' property.id %}">{{ property.title }}</a></h2>
                 <p>{{ property.description|truncatewords:20 }}</p>
                 <p>Price: ${{ property.total_price }}</p>
                 <p>Type: {{ property.get_property_type_display }}</p>

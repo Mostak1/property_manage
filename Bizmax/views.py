@@ -75,9 +75,9 @@ def team(request):
 def property_list(request):
     # Fetch all approved properties
     properties = Property.objects.filter(approved=True)  # Ensure there's an `is_approved` field in your model
-    return render(request, 'property_list.html', {'properties': properties})
+    return render(request, 'property_list2.html', {'properties': properties})
 
 def property_detail(request, pk):
     # Fetch a single property by its primary key (ID)
     property_obj = get_object_or_404(Property, pk=pk)
-    return render(request, 'property_detail.html', {'property': property_obj})
+    return render(request, 'property_detail2.html', {'property': property_obj})
