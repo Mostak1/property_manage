@@ -19,8 +19,6 @@ db.sqlite3
 .env
 
 # Static files and uploads
-/static/
-/media/
 
 # Local development settings
 settings_local.py

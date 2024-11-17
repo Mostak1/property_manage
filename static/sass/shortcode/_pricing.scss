@@ -1,0 +1,153 @@
+/*--------------------------------------------------------------
+  17. Pricing
+----------------------------------------------------------------*/
+.cs_pricing_control {
+  list-style: none;
+  font-size: 20px;
+  line-height: 1.6em;
+  li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:last-child {
+      a {
+        &::before {
+          left: initial;
+          right: 100%;
+        }
+      }
+    }
+  }
+  .cs_switch {
+    display: inline-block;
+    position: relative;
+    height: 24px;
+    width: 54px;
+    background: #dcdddf;
+    border: 1px solid #c4c6c8;
+    border-radius: 1.6em;
+    margin: 0 25px;
+    &::before {
+      content: '';
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+      background-color: #fff;
+      top: 0px;
+      left: 30px;
+      position: absolute;
+      transition: all 0.4s ease;
+    }
+  }
+  .cs_offer_shape {
+    display: flex;
+    position: absolute;
+    right: -70px;
+    bottom: 39px;
+  }
+  .active {
+    .cs_switch {
+      &::before {
+        left: 0;
+      }
+    }
+  }
+  a {
+    position: relative;
+    &::before {
+      content: '';
+      height: 24px;
+      width: 52px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 100%;
+      z-index: 1;
+    }
+  }
+  .cs_offer_label {
+    font-size: 12px;
+    line-height: 1.6em;
+    background-color: #666;
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px 10px;
+    position: absolute;
+    white-space: nowrap;
+    bottom: 36px;
+  }
+}
+.cs_pricing_table.cs_style_1 {
+  margin-top: 20px;
+  box-shadow: 0px 4px 60px rgba(179, 179, 179, 0.1);
+  .cs_price {
+    h3 {
+      margin: 0 15px;
+      line-height: 1em;
+    }
+    span {
+      position: relative;
+      bottom: 6px;
+    }
+  }
+  .cs_pricing_footer-btn {
+    background-color: #f1f1f1;
+    padding: 16px 20px;
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+  .cs_btn.cs_style_1 {
+    font-weight: 500;
+    padding: 14px 30px;
+    border-radius: 10px;
+  }
+  .cs_list.cs_style_1 {
+    margin-bottom: 0px;
+    min-height: 170px;
+  }
+  &:not(.cs_popular) {
+    .cs_btn.cs_style_1 {
+      background-color: $primary;
+      &::before {
+        display: none;
+      }
+      &:hover {
+        background-color: $accent;
+        color: #fff;
+      }
+    }
+  }
+  .cs_popular_label {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: $secondary;
+    line-height: 1.5em;
+    padding: 3px 10px;
+  }
+  &.cs_popular {
+    margin-top: 0;
+    .cs_pricing_table-in {
+      background-color: $primary;
+      color: #fff;
+    }
+    h2,
+    h3 {
+      color: #fff;
+    }
+    .cs_pricing_footer-btn {
+      background-color: $secondary;
+      color: #fff;
+      &:hover {
+        background-color: $accent;
+        color: #fff;
+      }
+    }
+  }
+}

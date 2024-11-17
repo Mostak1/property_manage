@@ -1,0 +1,18 @@
+.cs_cta.cs_style_1 {
+  background-color: #e9a132;
+  margin-top: 120px;
+  .cs_cta_text {
+    max-width: 680px;
+  }
+  .cs_cta_img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @media (max-width: 1199px) {
+      margin-right: -50px;
+    }
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+/*--------------------------------------------------------------
+  19. Video Modal
+----------------------------------------------------------------*/
+.cs_video_block.cs_style_1 {
+  height: 700px;
+  .cs_player_btn:before,
+  .cs_player_btn:after {
+    background-color: $accent;
+  }
+  h2 {
+    &::after {
+      content: '';
+      background-image: url(../img/video_block_text_shape.svg);
+      display: inline-block;
+      height: 61px;
+      width: 136px;
+      position: absolute;
+      bottom: -15px;
+      margin-left: 10px;
+    }
+  }
+  @media (max-width: 991px) {
+    height: 550px;
+  }
+  @media (max-width: 767px) {
+    br {
+      display: none;
+    }
+    .cs_player_btn {
+      transform: scale(0.8);
+    }
+  }
+}
+.cs_video_1_block_bg {
+  height: 70%;
+  background-position: bottom center;
+}

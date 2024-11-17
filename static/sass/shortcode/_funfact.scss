@@ -1,0 +1,13 @@
+.cs_funfact.cs_style_1 {
+  border: 1px solid #e6e6e6;
+  padding: 30px 25px;
+  .cs_funfact_icon {
+    flex: none;
+    svg {
+      max-height: 60px;
+    }
+  }
+  .cs_funfact_title {
+    color: $secondary;
+  }
+}

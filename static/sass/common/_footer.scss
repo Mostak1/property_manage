@@ -1,0 +1,63 @@
+/*--------------------------------------------------------------
+  7. Footer
+----------------------------------------------------------------*/
+.cs_footer_top {
+  border-bottom: 1px solid #353535;
+}
+
+.cs_copyright {
+  background-color: #1b1b1b;
+  color: #8a8a8a;
+  a {
+    color: $accent;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.cs_widget_title,
+.cs_newsletter_title {
+  line-height: 1.6em;
+}
+.cs_menu_widget {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.cs_text_widget {
+  p {
+    margin: 0;
+  }
+  + .cs_social_btns {
+    margin-top: 30px;
+  }
+}
+.cs_newsletter.cs_style_1 {
+  .cs_newsletter_input {
+    background-color: #2e2d2d;
+    padding: 10px 70px 10px 20px;
+    outline: none;
+    height: 58px;
+  }
+  .cs_newsletter_btn {
+    top: 8px;
+    right: 8px;
+    border: none;
+    z-index: 1;
+    outline: none;
+    height: 42px;
+    width: 45px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .cs_footer_logo {
+    display: none;
+  }
+}

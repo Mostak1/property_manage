@@ -1,0 +1,54 @@
+/*--------------------------------------------------------------
+  18. Steps
+----------------------------------------------------------------*/
+.cs_steps.cs_style_1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 86px;
+  @media (max-width: 1199px) {
+    grid-gap: 25px;
+  }
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px;
+  }
+  .cs_step_thumb {
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dashed $accent;
+    @media (max-width: 1199px) {
+      width: 280px;
+      height: 280px;
+    }
+  }
+  .cs_step {
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/arrow_shape.png);
+      width: 112px;
+      height: 110px;
+      right: -102px;
+      top: 100px;
+      background-size: contain;
+      background-position: center;
+      @media (max-width: 1400px) {
+        content: '';
+        position: absolute;
+        width: 70px;
+        right: -79px;
+      }
+      @media (max-width: 1199px) {
+        display: none;
+      }
+    }
+    &:nth-child(3n + 0),
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

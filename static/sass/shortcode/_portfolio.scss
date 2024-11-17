@@ -1,0 +1,52 @@
+/*--------------------------------------------------------------
+  16. Portfolio
+----------------------------------------------------------------*/
+.cs_portfolio.cs_style_1 {
+  height: 500px;
+  @media (max-width: 1300px) {
+    height: 430px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    height: 340px;
+  }
+  @media (max-width: 575px) {
+    height: 400px !important;
+  }
+  &.cs_size_1 {
+    height: 475px;
+  }
+  &.cs_size_2 {
+    height: 280px;
+  }
+  .cs_portfolio_overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(254, 198, 63, 0) 31.74%,
+      #e9a132 87.15%
+    );
+    opacity: 0;
+  }
+  .cs_portfolio_title {
+    opacity: 0;
+    transform: translateX(30px);
+    color: #fff;
+    a {
+      &:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+  }
+  &:hover {
+    .cs_portfolio_overlay {
+      opacity: 1;
+    }
+    .cs_portfolio_title {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .cs_portfolio_thumb {
+      transform: scale(1.12);
+    }
+  }
+}
