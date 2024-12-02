@@ -22,8 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 import os
 
 # Add this to your settings.py
-MEDIA_URL = '/'
-MEDIA_ROOT = os.path.join(BASE_DIR, '')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -36,7 +36,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODEL = 'Bizmax.CustomUser'
 # Application definition
 
 INSTALLED_APPS = [
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'Bizmax.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydatabase',  # Database name
+        'NAME': 'database_name',  # Database name
         'USER': 'root',         # Default XAMPP MySQL username
         'PASSWORD': '',         # XAMPP MySQL password (blank by default)
         'HOST': 'localhost',    # Localhost
