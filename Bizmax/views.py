@@ -1,6 +1,59 @@
 from django.shortcuts import render
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404,redirect
 from .models import Property
+
+from django.contrib.auth import authenticate, login
+# from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
+from .forms import UserRegistrationForm
+
+
+def register(request):
+    if request.method == "POST":
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            if user.role == 'admin':
+                return redirect('admin_dashboard')  # Replace with actual admin dashboard URL
+            else:
+                return redirect('user_dashboard')  # Replace with actual user dashboard URL
+    else:
+        form = UserRegistrationForm()
+    return render(request, 'register.html', {'form': form})
+def admin_login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user and user.is_staff:
+            login(request, user)
+            return redirect('admin_dashboard')
+        else:
+            return render(request, 'admin_login.html', {'error': 'Invalid credentials'})
+    return render(request, 'admin_login.html')
+
+def user_login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user and not user.is_staff:
+            login(request, user)
+            return redirect('user_dashboard')
+        else:
+            return render(request, 'user_login.html', {'error': 'Invalid credentials'})
+    return render(request, 'user_login.html')
+@login_required
+def user_dashboard(request):
+    if request.user.is_staff:
+        return redirect('admin_dashboard')
+    return render(request, 'user_dashboard.html')
+@login_required
+def admin_dashboard(request):
+    if not request.user.is_staff:
+        return redirect('user_dashboard')
+    return render(request, 'admin_dashboard.html')
 
 def index(request):
     return render(request, "index.html")

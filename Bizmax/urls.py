@@ -4,9 +4,15 @@ from django.urls import path
 from Bizmax import views
 from django.conf import settings
 from django.conf.urls.static import static
+from . import views
+from .views import register
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    path('admin/login/', views.admin_login, name='admin_login'),
+    path('user/login/', views.user_login, name='user_login'),
+    path('admin/dashboard/', views.admin_dashboard, name='admin_dashboard'),
+    path('user/dashboard/', views.user_dashboard, name='user_dashboard'),
+    path('register/', register, name='register'),
     path('', views.insurance), 
     path('index', views.insurance),
     path('about', views.about),
